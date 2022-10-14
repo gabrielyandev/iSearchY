@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Code", sans-serif, monospace;
+}
+
+
+body {
+  background-color: var(--bg-ft);
+}
+
+:root {
+  --roxo-claro: #5e17eb;
+  --roxo-escuro: #3b0f94;
+  --bg-ft: #f1f1f1;
+  --cinza-escuro: #555555;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+    height: 100px;
+  }
+  
+  nav > h1 {
+    color: var(--roxo-claro);
+  }
+  
+  nav > spam {
+    color: var(--roxo-escuro);
+  }
+  
+  nav > a {
+    color: var(--roxo-escuro);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  
+  nav > a:hover {
+    color: var(--roxo-claro);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  
+/* Container de Cadastro */
+.container-cadastro{
+   display: flex;
+   /* flex-direction: column; */
+   justify-content: center;
+   align-items: center;
+   height: 70%;
+   /* Abaixar a caixa de cadastro. */
+   padding: 80px;
+    
+}
+
+form{
+    display: flex;
+    border: 5px solid var(--roxo-escuro);
+    border-radius: 11px;
+    padding: 40px;
+}
+
+label{
+  color: var(--roxo-escuro);
+  font-weight: 700;
+}
+
+footer > p{
+    text-align: center;
+    color: var(--roxo-escuro);
+    font-weight: 700;
+}
+
+
+
+/* Input caixa */
+.input-cadastro input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 11px;
+    box-shadow: 1px 3px 6px var(--roxo-escuro);
+    font-size: 0.8rem;
+    /* background-color: #eeeeee75; */
+    scrollbar-color: var(--roxo-claro);
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .input-cadastro input:hover {
+    /* background-color: var(--); */
+    box-shadow: 5px 5px 4px var(--roxo-escuro);
+    scrollbar-color: var(--roxo-claro);
+  }
+  
+  .input-cadastro input:focus-visible {
+    outline: 1px solid #6c63ff;
+  }
+
+  .input-cadastro {
+    padding: 10px;
+  }

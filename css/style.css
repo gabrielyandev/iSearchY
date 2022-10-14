@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Code", sans-serif, monospace;
+}
+
+
+body {
+  background-color: var(--bg-ft);
+}
+
+:root {
+  --roxo-claro: #5e17eb;
+  --roxo-escuro: #3b0f94;
+  --bg-ft: #f1f1f1;
+  --cinza-escuro: #555555;
+}
+
+.caixa {
+  height: 65vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 30px;
+}
+
+nav > h1 {
+  color: var(--roxo-claro);
+}
+
+nav > spam {
+  color: var(--roxo-escuro);
+}
+
+nav > a {
+  color: var(--roxo-escuro);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+nav > a:hover {
+  color: var(--roxo-claro);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#main {
+  color: var(--roxo-claro);
+}
+
+
+#main > p {
+  color: var(--roxo-escuro);
+  font-weight: 700;
+  padding-top: 10px;
+}
+
+footer > .button {
+  background-color: var(--roxo-escuro);
+  border-radius: 16px;
+  padding: 20px;
+  border: none;
+  cursor: pointer;
+  color: var(--bg-ft);
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+footer > .button:hover {
+  background-color: #5E17EB;
+  color: var(--bg-ft);
+}
+
+footer > p {
+  color: var(--roxo-escuro);
+  font-weight: 600;
+}
+
+#container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  padding-top: 180px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: sticky;
+    margin-top: 100px;
+    /* margin-bottom: 20px; */
+}
+
+section{
+  padding:1px;
+}
+
+.padrao{
+  /* border: 1px solid #3b0f94; */
+  padding-top:35px;
+}
+
+
+/* Animations */
+@keyframes fromTop{
+  from{
+      opacity: 0;
+      transform: translateY(-30px);
+  }
+
+  to{
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes toTop{
+  from{
+      opacity: 0;
+      transform: translateX(30px);
+  }
+
+  to{
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes toRight{
+  from{
+      opacity: 0;
+      transform: translateX(-50px);
+  }
+
+  to{
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+img{
+  animation: toRight .9s backwards;
+  }
+
+h2,p{
+animation: toTop .9s backwards;
+}
+
+footer{
+animation: fromTop .9s backwards;
+}
+
+nav{
+animation: fromTop .9s backwards;
+}
