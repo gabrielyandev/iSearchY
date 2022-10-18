@@ -41,13 +41,6 @@ nav > a {
   color: var(--roxo-escuro);
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.2s;
-}
-
-nav > a:hover {
-  color: var(--roxo-claro);
-  font-weight: 700;
-  text-decoration: none;
 }
 
 #main {
