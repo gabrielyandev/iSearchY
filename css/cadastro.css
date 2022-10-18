@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+
 * {
-  margin: 0 ;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Fira Code", sans-serif, monospace;
@@ -13,31 +14,43 @@
   --cinza-escuro: #555555;
 }
 
+.container {
+  width: 100%;
+  height: 100vh;
+
+  background: #E0EAFC;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #CFDEF3, #E0EAFC);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
 
 /* NAV */
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
-nav > h1 {
+nav>h1 {
   color: var(--roxo-claro);
 }
 
-nav > spam {
+nav>spam {
   color: var(--roxo-escuro);
 }
 
-nav > a {
+nav>a {
   color: var(--roxo-escuro);
   font-weight: 600;
   text-decoration: none;
 }
 
 
-nav > a:hover {
+nav>a:hover {
   color: var(--roxo-claro);
 }
 
@@ -47,7 +60,7 @@ nav > a:hover {
 .cadastro {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   padding-top: 120px;
 }
@@ -65,7 +78,6 @@ nav > a:hover {
   border-radius: 11px;
   box-shadow: 1px 3px 6px var(--roxo-escuro);
   font-size: 0.8rem;
-  /* background-color: #eeeeee75; */
   scrollbar-color: var(--roxo-claro);
   display: flex;
   flex-direction: column;
@@ -82,47 +94,47 @@ nav > a:hover {
 
 /* Input login */
 .input-login input {
-    margin: 0.6rem 0;
-    padding: 0.8rem 1.2rem;
-    border: none;
-    border-radius: 11px;
-    box-shadow: 1px 3px 6px var(--roxo-escuro);
-    font-size: 0.8rem;
-    scrollbar-color: var(--roxo-claro);
-    display: flex; 
-  }
-  
-  .input-login input:hover {
-    box-shadow: 5px 5px 4px var(--roxo-escuro);
-    scrollbar-color: var(--roxo-claro);
-  }
-  
-  .input-login input:focus-visible {
-    outline: 1px solid #6c63ff;
-  }
-
-/* Box container */
-.grupo-cadastro{
-    background-color: var(--bg-ft);
-    width: auto;
-    padding: 29px;
-    border-radius: 11px;
-    border: 2px solid var(--roxo-escuro);
-    box-shadow: 1px 2px 6px var(--roxo-escuro);
+  margin: 0.6rem 0;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 11px;
+  box-shadow: 1px 3px 6px var(--roxo-escuro);
+  font-size: 0.8rem;
+  scrollbar-color: var(--roxo-claro);
+  display: flex;
 }
 
-.grupo-login{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: auto;
-    background-color: var(--bg-ft);
-    padding: 30px;
-    border-radius: 11px;
-    border: 2px solid var(--roxo-escuro);
-    box-shadow: 1px 2px 6px var(--roxo-escuro);
-    color: var(--roxo-escuro);
-    margin-bottom: 300px;
+.input-login input:hover {
+  box-shadow: 5px 5px 4px var(--roxo-escuro);
+  scrollbar-color: var(--roxo-claro);
+}
+
+.input-login input:focus-visible {
+  outline: 1px solid #6c63ff;
+}
+
+/* Box container */
+.grupo-cadastro {
+  background-color: white;
+  width: auto;
+  padding: 29px;
+  border-radius: 11px;
+  border: 2px solid var(--roxo-escuro);
+  box-shadow: 1px 2px 6px var(--roxo-escuro);
+}
+
+.grupo-login {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 11px;
+  border: 2px solid var(--roxo-escuro);
+  box-shadow: 1px 2px 6px var(--roxo-escuro);
+  color: var(--roxo-escuro);
+  margin-bottom: 300px;
 }
 
 .button {
@@ -139,119 +151,121 @@ nav > a:hover {
 .button:hover {
   background-color: var(--roxo-claro);
   color: var(--bg-ft);
-} 
-
-section, h6{
-    color: var(--roxo-escuro);
-    font-weight: 700;
 }
 
-.titulo-cad{
-    font-size: 2.5rem;
-    margin-left: 10px;
+section,
+h6 {
+  color: var(--roxo-escuro);
+  font-weight: 700;
 }
 
-.titulo-login{
-    font-size: 2rem;
-    padding: 1px;
+.titulo-cad {
+  font-size: 2.5rem;
+  margin-left: 10px;
 }
 
-.button-criar{
+.titulo-login {
+  font-size: 2rem;
+  padding: 1px;
+}
+
+.button-criar {
   margin-left: 9px;
 }
 
-.button-entrar{
+.button-entrar {
   margin-top: 10px;
 }
 
-.input-cadastro label{
+.input-cadastro label {
   margin-left: 7px;
   color: var(--roxo-escuro);
   font-weight: 500;
 }
 
-img, svg {
+img,
+svg {
   vertical-align: middle;
 }
 
 /* FOOTER */
-footer > p {
-    color: var(--roxo-escuro);
-    font-weight: 600;
-  }
-  
- 
-  
-  footer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      position: sticky;
-      margin-top: 6.25rem;
+footer>p {
+  color: var(--roxo-escuro);
+  font-weight: 600;
 }
 
- /* Animations */
-@keyframes fromTop{
-  from{
-      opacity: 0;
-      transform: translateY(-30px);
-  }
 
-  to{
-      opacity: 1;
-      transform: translateY(0);
-  }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 4rem;
 }
 
-@keyframes toTop{
-  from{
-      opacity: 0;
-      transform: translateX(30px);
+/* Animations */
+@keyframes fromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
   }
 
-  to{
-      opacity: 1;
-      transform: translateX(0);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@keyframes toRight{
-  from{
-      opacity: 0;
-      transform: translateX(-50px);
+@keyframes toTop {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
   }
 
-  to{
-      opacity: 1;
-      transform: translateX(0);
-  }
-}
-
-@keyframes toLeft{
-  from{
-      opacity: 0;
-      transform: translateX(50px);
-  }
-
-  to{
-      opacity: 1;
-      transform: translateX(0);
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
-.grupo-cadastro{
+@keyframes toRight {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes toLeft {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.grupo-cadastro {
   animation: toRight .5s backwards;
 }
-.grupo-login{
+
+.grupo-login {
   animation: toLeft .8s backwards;
 }
 
 
-footer{
+footer {
   animation: fromTop .9s backwards;
 }
 
-nav{
+nav {
   animation: fromTop .9s backwards;
 }
