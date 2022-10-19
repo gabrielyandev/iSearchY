@@ -156,3 +156,13 @@ animation: fromTop .9s backwards;
 nav{
 animation: fromTop .9s backwards;
 }
+
+@media (max-width: 320px) {
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+    width: 100%;
+  }
+}
