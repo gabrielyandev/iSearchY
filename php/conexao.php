@@ -1,11 +1,10 @@
-<?php
+<?php 
+    $servidor = "localhost";
+    $user = "root";
+    $passw = "";
+    $isearchy = "isearch";
 
-$servidor = "localhost";
-$login = "root";
-$senha = "";
-$nomedobanco = "isearch";
-
-$conexao = new mysqli($servidor, $login, $senha, $nomedobanco)
-// acessa o objeto mysql
-
-?>
+    $conexao = mysqli_connect($servidor, $user, $passw, $isearch);
+    if(!$conexao) {
+        die("Houve um erro ao conectar: ".mysqli_connect_errno());
+    }

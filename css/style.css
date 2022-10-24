@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +12,12 @@ body {
   background-color: var(--bg-ft);
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
 :root {
   --roxo-claro: #5e17eb;
   --roxo-escuro: #3b0f94;
@@ -18,46 +25,73 @@ body {
   --cinza-escuro: #555555;
 }
 
-.caixa {
-  height: 65vh;
+.container {
+  width: 90%;
 }
 
 nav {
+  width: 100%;
+  height: 60px;
+
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding-top: 30px;
+  padding-top: 1rem;
 }
 
-nav > h1 {
+.nav-1>h1 {
   color: var(--roxo-claro);
 }
 
-nav > spam {
+.nav-1>spam {
   color: var(--roxo-escuro);
 }
 
-nav > a {
+.nav-1>a {
   color: var(--roxo-escuro);
   font-weight: 600;
   text-decoration: none;
 }
 
+.nav-1>.img-menu {
+  width: 30%;
+}
+
 #main {
+  width: 50%;
   color: var(--roxo-claro);
 }
 
 
-#main > p {
+#main>p {
   color: var(--roxo-escuro);
   font-weight: 700;
-  padding-top: 10px;
+  padding-top: 0.85rem;
+  text-align: justify;
 }
 
-footer > .button {
+#inicial {
+  width: 50%;
+}
+
+#inicial>img {
+  width: auto;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  position: sticky;
+  margin-top: 3rem;
+}
+
+footer>.button {
   background-color: var(--roxo-escuro);
   border-radius: 16px;
-  padding: 20px;
+  padding: 0.90rem;
   border: none;
   cursor: pointer;
   color: var(--bg-ft);
@@ -65,104 +99,182 @@ footer > .button {
   transition: 0.5s;
 }
 
-footer > .button:hover {
+footer>.button:hover {
   background-color: #5E17EB;
   color: var(--bg-ft);
 }
 
-footer > p {
+footer>p {
   color: var(--roxo-escuro);
   font-weight: 600;
 }
 
 #container {
   display: flex;
-  width: 100%;
-  justify-content: space-around;
+  width: auto;
+  justify-content: space-between;
   align-items: center;
-  height: 100%;
-  padding-top: 180px;
+  padding-top: 8rem;
 }
 
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    position: sticky;
-    margin-top: 100px;
-    /* margin-bottom: 20px; */
+
+section {
+  padding: 1px;
 }
 
-section{
-  padding:1px;
-}
-
-.padrao{
+.padrao {
   /* border: 1px solid #3b0f94; */
-  padding-top:35px;
+  padding-top: 35px;
 }
 
 
 /* Animations */
-@keyframes fromTop{
-  from{
-      opacity: 0;
-      transform: translateY(-30px);
+/* @keyframes fromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
   }
 
-  to{
-      opacity: 1;
-      transform: translateY(0);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-}
+} */
 
-@keyframes toTop{
-  from{
-      opacity: 0;
-      transform: translateX(30px);
-  }
-
-  to{
-      opacity: 1;
-      transform: translateX(0);
-  }
-}
-
-@keyframes toRight{
-  from{
-      opacity: 0;
-      transform: translateX(-50px);
+/* @keyframes toTop {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
   }
 
-  to{
-      opacity: 1;
-      transform: translateX(0);
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-}
+} */
 
-img{
+/* @keyframes toRight {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+} */
+
+/* img {
   animation: toRight .9s backwards;
-  }
-
-h2,p{
-animation: toTop .9s backwards;
 }
 
-footer{
-animation: fromTop .9s backwards;
+h2,
+p {
+  animation: toTop .9s backwards;
 }
 
-nav{
-animation: fromTop .9s backwards;
+footer {
+  animation: fromTop .9s backwards;
 }
 
-@media (max-width: 320px) {
+nav {
+  animation: fromTop .9s backwards;
+} */
+
+@media screen and (min-width: 320px) and (max-width: 850px) {
   nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding-top: 10px;
+    padding-top: 1rem;
+    max-width: 100vw;
+    height: 70px;
+  }
+
+  #container {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .container {
+    width: 90%;
+    text-align: center;
+  }
+
+  #inicial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  #inicial>#img-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom
+  }
+
+  #main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: var(--roxo-claro);
+  }
+
+
+  #main>p {
+    color: var(--roxo-escuro);
+    font-weight: 700;
+    padding-top: 0.85rem;
+    text-align: justify;
+  }
+
+  #inicial {
+    width: 90%;
+  }
+
+  #inicial>img {
+    width: auto;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    position: fixed;
+    width: 90%;
+    text-align: center;
+  }
+
+  footer>.button {
+    background-color: var(--roxo-escuro);
+    border-radius: 16px;
+    width: 90%;
+    text-align: center;
+    padding: 0.90rem;
+    border: none;
+    cursor: pointer;
+    color: var(--bg-ft);
+    text-decoration: none;
+    transition: 0.5s;
+  }
+
+  footer>.button:hover {
+    background-color: #5E17EB;
+    color: var(--bg-ft);
+  }
+
+  footer>p {
+    color: var(--roxo-escuro);
+    font-weight: 600;
   }
 }

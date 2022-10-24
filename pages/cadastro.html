@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/cadastro.css" />
+    <link rel="stylesheet" href="../css/cadastro.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png" />
@@ -18,7 +18,7 @@
         <nav>
             <a href="../index.html">
                 <h1>
-                    <span>i</span>Search<span>Y</span><img src="/assets/iconlogo.svg" alt="" />
+                    <span>i</span>Search<span>Y</span><img src="../assets/iconlogo.svg" alt="" />
                 </h1>
             </a>
             <a href="../index.html">Volte para o inicio <img src="../assets/home.svg" alt="" /></a>
@@ -26,31 +26,30 @@
 
         <!-- Container Referente a parte de Cadastrob -->
 
-        <form action="" class="cadastro">
+        <form action="/php/cadastro.php" class="cadastro" method="POST">
             <div class="grupo-cadastro">
                 <div class="title-cadastro">
                     <h6 class="titulo-cad">Cadastre-se agora</h6>
                 </div>
                 <div class="input-cadastro">
                     <label for="">Nome:</label>
-                    <input type="text" name="" id="" placeholder="Digite seu nome completo" />
+                    <input type="text" name="nomecadastro" id="nome" placeholder="Digite seu nome completo" />
                 </div>
                 <div class="input-cadastro">
                     <label for="">E-mail:</label>
-                    <input type="email" name="" id="" placeholder="isearchy@gmail.com" required />
+                    <input type="email" name="emailcadastro" id="email" placeholder="isearchy@gmail.com" required />
                 </div>
                 <div class="input-cadastro">
                     <label for="">CPF:</label>
-                    <input type="text" name="" id="" placeholder="xxx.xxx.xxx-xx" 
-                        maxlength="14" />
+                    <input type="text" name="cpfcadastro" id="cpf" placeholder="xxx.xxx.xxx-xx" maxlength="14" />
                 </div>
                 <div class="input-cadastro">
                     <label for="">Usuário:</label>
-                    <input type="text" name="" id="" placeholder="Digite seu Usuário" />
+                    <input type="text" name="usuariocadastro" id="usuario" placeholder="Digite seu Usuário" />
                 </div>
                 <div class="input-cadastro">
                     <label for="">Senha:</label>
-                    <input type="password" name="" id="" placeholder="Digite sua Senha" />
+                    <input type="password" name="senhacadastro" id="senha" placeholder="Digite sua Senha" />
                 </div>
                 <input type="submit" value="Criar Conta" class="button button-criar" />
             </div>
@@ -58,7 +57,7 @@
             <!-- Container Referente a parte de Login -->
 
             <div>
-                <img src="/assets/updated-resume.svg" alt="cadastro-image" width="500">
+                <img src="../assets/updated-resume.svg" alt="cadastro-image" width="500">
             </div>
         </form>
 
