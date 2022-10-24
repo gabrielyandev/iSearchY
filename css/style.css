@@ -114,17 +114,12 @@ footer>p {
   width: auto;
   justify-content: space-between;
   align-items: center;
-  padding-top: 8rem;
+  padding-top: 3rem;
 }
 
 
 section {
   padding: 1px;
-}
-
-.padrao {
-  /* border: 1px solid #3b0f94; */
-  padding-top: 35px;
 }
 
 
@@ -189,7 +184,7 @@ nav {
     align-items: center;
     padding-top: 1rem;
     max-width: 100vw;
-    height: 70px;
+    height: 20%;
   }
 
   #container {
@@ -258,7 +253,6 @@ nav {
   footer>.button {
     background-color: var(--roxo-escuro);
     border-radius: 16px;
-    width: 90%;
     text-align: center;
     padding: 0.90rem;
     border: none;
